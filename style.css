@@ -1,0 +1,268 @@
+/*CSS Reset*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS Variables */
+:root{
+    --navbar-height: 50px;
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items:center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    opacity: 0.4;
+    }
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 10px 50px;
+    
+}
+#logo img{
+    height:56px;
+    margin: 0px  0px;
+    filter: invert(100%);
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul{
+display: flex;    
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size:1.3rem;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'Baloo Bhai 2', cursive;
+    transition: color 0.3s ease-in;
+    transition: background-color 0.3s ease-out;
+    transition: transform 0.5s ease-in-out;
+}
+
+#navbar ul li a.active{
+    color: black;
+    background-color: rgba(255, 255, 255);
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: rgba(255, 255, 255);
+    transform: scale(1.1);
+}
+
+/* Home Section */
+#home{
+    display:flex;
+    flex-direction:column;
+    padding: 3px 200px;
+    height: 358px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    background:url('https://cdn.pixabay.com/photo/2016/12/26/17/28/spaghetti-1932466__480.jpg') no-repeat center center/cover;
+    height: 440px;
+    top:0px;
+    width: 100%;
+    z-index:-1;
+    opacity: 0.9;
+    }
+
+#home h1{
+    color:white;
+    font-size: 3rem;
+    font-family: 'Bree Serif', serif;
+    margin-bottom: 10px;
+}
+
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', serif;
+}
+/* Services section */
+
+#services{
+    margin: 20px;
+    display: flex;
+}
+
+#services .box{
+    background-color: rgba(238, 130, 238, 0.055);
+    border:2px solid red;
+    border-radius: 20px;
+    margin: 0px 10px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+#services .box:hover{
+    box-shadow: 7px 8px 20px rgb(241, 85, 150);
+}
+
+
+#services .box img{
+    height: 100px;
+    margin: auto;
+    display: block;
+}
+
+#services-container h1{
+    font-size: 3rem;
+    font-family: 'Bree Serif', serif;
+    margin-top: 20px;
+}
+
+#services-container p{
+    font-size: 1.1rem;
+    font-family: 'Bree Serif', serif;
+    margin-top: 10px;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url(bg1.jpg) no-repeat center center/cover;
+    height:285px;
+    width: 100%;
+    z-index:-1;
+    opacity: 0.4;
+    }
+
+#clients{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clients img{
+    height: 100px;
+    transition: all 0.4s ease-in-out;
+}
+
+#clients img:hover{
+    transform: scale(1.3);
+}
+
+#client-section h1{
+    font-size: 3rem;
+    font-family: 'Bree Serif', serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#clients .client-items{
+    margin: 0px 10px;
+    padding: 20px;
+    
+}
+
+#contact-section::before{
+    content: "";
+    position: absolute;
+    background: url(bg2.jpg) no-repeat center center/cover;
+    height: 630px;
+    width: 100%;
+    z-index:-1;
+    opacity: 0.8;
+    }
+
+#contact-section h1{
+    font-size: 3rem;
+    font-family: 'Bree Serif', serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#contact-box{
+    font-family: 'Bree serif', serif;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width:100%;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding: 0.5rem;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-family: 'Bree Serif', serif;
+}
+.formgroup .btn{
+margin-left: 37px;
+}
+
+footer{
+    margin-bottom: 0px;
+    background-color: black;
+    color: white;
+    padding: 10px 10px;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-size: 3rem;
+    padding: 12px;
+}
+
+.h-secondary{
+    margin:10px;
+    font-family: 'Bree Serif', serif;
+}
+
+.btn{
+    padding: 8px 20px;
+    border: 2px solid white;
+    background-color: rgb(107, 9, 9);
+    margin: 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    font-family: 'Bree Serif', serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: rgb(153, 9, 9);
+    transform: scale(1.1);
+}
+
+.center{
+    text-align: center;
+}
+
+
+
